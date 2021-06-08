@@ -1,5 +1,5 @@
 # demo_integration
-Projet démonstration pour intégration continue avec Git, GitHub
+Projet démonstration pour intégration continue avec Git, GitHub.
 
 # Documentation
 Voir documentation dans le [WiKi](https://github.com/introlab/demo_integration/wiki).
