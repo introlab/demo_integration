@@ -36,7 +36,7 @@ jobs:
           use-isort: false
           extra-pylint-options: ""
           extra-pycodestyle-options: ""
-          extra-flake8-options: "per-file-ignores = __init__.py:F401"
+          extra-flake8-options: "--exclude=__init__.py"
           extra-black-options: ""
           extra-mypy-options: ""
           extra-isort-options: ""
