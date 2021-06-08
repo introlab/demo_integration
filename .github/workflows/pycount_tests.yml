@@ -23,8 +23,15 @@ jobs:
           submodules: recursive
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.6
-      - uses: whynothugo/python-linting@master
+          python-version: 3.6     
+      #- uses: whynothugo/python-linting@master
+      - uses: rahul-deepsource/pyaction@1.4.0
+        with:
+          python-root-list: "library/pycount"
+          use-pycodestyle: false
+          use-mypy: false
+          use-vulture: true
+          extra-pylint-options: "--output-format="colorized"
     
   build:
     needs: linting
