@@ -2,4 +2,7 @@ cmake-build-debug/
 cmake-build-release/
 build/
 
+dist/
+cppcount_pybind11.egg-info/
+
 .idea/
