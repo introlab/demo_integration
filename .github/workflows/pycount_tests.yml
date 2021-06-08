@@ -31,7 +31,7 @@ jobs:
           use-pycodestyle: false
           use-mypy: false
           use-vulture: true
-          extra-pylint-options: "--output-format="colorized"
+          extra-pylint-options: "--output-format=colorized"
     
   build:
     needs: linting
