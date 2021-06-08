@@ -2,7 +2,7 @@
 Projet démonstration pour intégration continue avec Git, GitHub
 
 # Documentation
-Voir documentation dans le WiKi.
+Voir documentation dans le [WiKi](https://github.com/introlab/demo_integration/wiki).
 
 # Auteur(s)
 * Marc-Antoine Maheux (@mamaheux)
