@@ -15,14 +15,12 @@ jobs:
   
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    
-    - name: Checkout
     - uses: actions/checkout@v2
       with:
         submodules: recursive
         
     - name: Compilation     
-    - uses: arduino/compile-sketches@v1
+      uses: arduino/compile-sketches@v1
       with:
         fqbn: 'arduino:avr:uno'
         sketch-paths: '- firmware'
