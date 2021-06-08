@@ -25,13 +25,21 @@ jobs:
         with:
           python-version: 3.6     
       #- uses: whynothugo/python-linting@master
-      - uses: rahul-deepsource/pyaction@1.4.0
+      - uses: ricardochaves/python-lint@v1.4.0
         with:
           python-root-list: "library/pycount"
+          use-pylint: false
           use-pycodestyle: false
+          use-flake8: true
+          use-black: false
           use-mypy: false
-          use-vulture: true
-          extra-pylint-options: "--output-format=colorized"
+          use-isort: false
+          extra-pylint-options: ""
+          extra-pycodestyle-options: ""
+          extra-flake8-options: ""
+          extra-black-options: ""
+          extra-mypy-options: ""
+          extra-isort-options: ""
     
   build:
     needs: linting
