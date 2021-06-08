@@ -12,4 +12,4 @@ Projet démonstration pour intégration continue avec Git, GitHub
 
 ![IntRoLab](images/IntRoLab.png)
 
-[IntRoLab - Intelligent / Interactive / Integrated / Interdisciplinary Robot Lab](https://introlab.3it.usherbrooke.ca)
+[IntRoLab - Laboratoire de robotique intelligente / interactive / intégrée / interdisciplinaire @ Université de Sherbrooke](https://introlab.3it.usherbrooke.ca)
