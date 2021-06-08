@@ -1,6 +1,9 @@
 # demo_integration
 Projet démonstration pour intégration continue avec Git, GitHub
 
+# Documentation
+Voir documentation dans le WiKi.
+
 # Auteur(s)
 * Marc-Antoine Maheux (@mamaheux)
 * Dominic Létourneau (@doumdi)
