@@ -10,4 +10,6 @@ Projet démonstration pour intégration continue avec Git, GitHub
 
 # Remerciements
 
+![IntRoLab](images/IntRoLab.png)
 
+[IntRoLab - Intelligent / Interactive / Integrated / Interdisciplinary Robot Lab](https://introlab.3it.usherbrooke.ca)
