@@ -198,9 +198,9 @@ jobs:
         ${{ steps.get_release_version.outputs.version }}"
     
     - name: Création de l'archive
-      working-directory: library/cppcount/build
+      working-directory: library/cppcount/build/dist
       run: |
-        tar cvzf ${{ steps.generate_release_file_name.outputs.release_file_name }}.tar.gz dist
+        tar cvzf ../${{ steps.generate_release_file_name.outputs.release_file_name }}.tar.gz .
         
     - name: Téléversement de l'archive
       id: upload-release-asset 
