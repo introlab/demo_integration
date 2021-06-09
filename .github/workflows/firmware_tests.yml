@@ -17,5 +17,9 @@ jobs:
       with:
         submodules: recursive
         
-    - name: Compilation du firmware Arduino
-      uses: ./.github/actions/action-firmware-test
+    - name: Compilation     
+      uses: arduino/compile-sketches@v1
+      with:
+        fqbn: 'arduino:avr:uno'
+        sketch-paths: '- firmware'
+        verbose: True
