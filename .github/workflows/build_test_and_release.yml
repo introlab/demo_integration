@@ -65,13 +65,52 @@ jobs:
         run: python3 -m unittest
 
 
+  # This workflow contains a single job called "build"
+  test-cppcount:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
 
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Install system dependencies
+        run: | 
+          sudo apt-get update
+          sudo apt-get install ninja-build cmake build-essential python3
+    
+      
+      - name: Create build directory
+        working-directory: library/cppcount
+        run: |
+          mkdir build
+      - name: Build project
+        working-directory: library/cppcount/build
+        run: |
+          cmake ..
+          make
+          
+      - name: Execute tests
+        working-directory: library/cppcount/build/cppcount/tests
+        run: |
+          ./test_cppcount
+          
+      - name: Build Python Wheel
+        working-directory: library/cppcount
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade build
+          python3 -m build
+        
 
 
 
   # This workflow contains a single job called "build"
   release:
-    needs: test-pycount
+    needs: [test-pycount, test-cppcount]
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
