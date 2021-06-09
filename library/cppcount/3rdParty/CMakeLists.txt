@@ -3,4 +3,7 @@ if (POLICY CMP0048)
 endif (POLICY CMP0048)
 
 add_subdirectory(pybind11)
-add_subdirectory(googletest)
+
+if (CPP_COUNT_ENABLE_TESTS)
+    add_subdirectory(googletest)
+endif()

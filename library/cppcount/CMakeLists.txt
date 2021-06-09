@@ -33,6 +33,8 @@ function(assign_source_group)
     endforeach ()
 endfunction(assign_source_group)
 
+# Default behavior is to enable tests
+option(CPP_COUNT_ENABLE_TESTS "Build tests" ON)
 
 project(cppcount)
 

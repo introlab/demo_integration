@@ -20,7 +20,10 @@ assign_source_group(${source_files})
 
 install(TARGETS cppcount DESTINATION lib)
 install(DIRECTORY include/ DESTINATION include
-    FILES_MATCHING PATTERN "*.h")
+        FILES_MATCHING PATTERN "*.h")
 
 add_subdirectory(python)
-add_subdirectory(tests)
+
+if (CPP_COUNT_ENABLE_TESTS)
+    add_subdirectory(tests)
+endif()
