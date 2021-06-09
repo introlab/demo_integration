@@ -1,4 +1,6 @@
 # demo_integration
+[![Actions Status](https://github.com/introlab/demo_integration/actions/workflows/build_test_and_release.yml/badge.svg)](https://github.com/introlab/demo_integration/actions)
+
 Projet démonstration pour intégration continue avec Git, GitHub.
 
 # Documentation
