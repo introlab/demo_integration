@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def count_characters(string):
     counts = defaultdict(int)
 
