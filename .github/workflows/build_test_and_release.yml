@@ -87,9 +87,25 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install --upgrade build
           python3 -m build
+          
+  build_firmware:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Obtention du code
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+        
+    - name: Compilation     
+      uses: arduino/compile-sketches@v1
+      with:
+        fqbn: 'arduino:avr:uno'
+        sketch-paths: '- firmware'
+        verbose: True
         
   create_release:
-    needs: [test_pycount, test_cppcount]
+    needs: [test_pycount, test_cppcount, build_firmware]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
