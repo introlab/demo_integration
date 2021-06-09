@@ -23,33 +23,34 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Obtention du code
+        uses: actions/checkout@v2
         with:
           submodules: recursive
 
-      - name: Install system dependencies
+      - name: Installation des dépendances du système
         run: | 
           sudo apt-get update
           sudo apt-get install ninja-build cmake build-essential python3
     
       
-      - name: Create build directory
+      - name: Création du dossier de compilation
         working-directory: library/cppcount
         run: |
           mkdir build
 
-      - name: Build project
+      - name: Compilation
         working-directory: library/cppcount/build
         run: |
           cmake ..
           make
           
-      - name: Execute tests
+      - name: Exécution des tests
         working-directory: library/cppcount/build/cppcount/tests
         run: |
           ./test_cppcount
           
-      - name: Build Python Wheel
+      - name: Compilation du module Python
         working-directory: library/cppcount
         run: |
           python3 -m pip install --upgrade pip
