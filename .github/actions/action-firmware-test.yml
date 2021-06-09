@@ -4,11 +4,6 @@ description: "Compilation d'un sketch Arduino"
 runs:
   using: "composite"
   steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        submodules: recursive
-        
     - name: Compilation     
       uses: arduino/compile-sketches@v1
       with:
