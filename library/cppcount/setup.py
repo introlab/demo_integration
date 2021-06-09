@@ -105,7 +105,7 @@ class CMakeBuild(build_ext):
 # logic and declaration, and simpler if you include description/version in a file.
 setup(
     name="cppcount_pybind11",
-    version="0.0.1",
+    version="dev",
     author="introlab",
     author_email="",
     description="",

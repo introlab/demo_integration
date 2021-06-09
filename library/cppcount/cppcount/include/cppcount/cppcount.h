@@ -2,5 +2,6 @@
 #define CPPCOUNT_CPPCOUNT_H
 
 #include <cppcount/characters.h>
+#include <cppcount/version.h>
 
 #endif

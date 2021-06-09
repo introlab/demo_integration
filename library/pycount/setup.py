@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="pycount",
-    version="0.0.1",
+    version="dev",
     author="introlab",
     author_email="",
     description="",
