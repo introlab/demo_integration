@@ -187,7 +187,7 @@ jobs:
     - name: Compilation
       working-directory: library/cppcount/build
       run: |
-        cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.build-type}} -DCPP_COUNT_VERSION="${{steps.get_release_version.outputs.version}}" -DCMAKE_INSTALL_PREFIX=$PWD/dist
+        cmake .. -DCMAKE_BUILD_TYPE=${{ matrix.build-type}} -DCPP_COUNT_VERSION="${{steps.get_release_version.outputs.version}}" -DCMAKE_INSTALL_PREFIX=$PWD/dist -DCPP_COUNT_ENABLE_TESTS=0
         make install
         
     - name: Génération du nom de fichier
@@ -198,9 +198,9 @@ jobs:
         ${{ steps.get_release_version.outputs.version }}"
     
     - name: Création de l'archive
-      working-directory: library/cppcount/build/dist
+      working-directory: library/cppcount/build
       run: |
-        tar cvzf ${{ steps.generate_release_file_name.outputs.release_file_name }}.tar.gz .
+        tar cvzf ${{ steps.generate_release_file_name.outputs.release_file_name }}.tar.gz dist
         
     - name: Téléversement de l'archive
       id: upload-release-asset 
@@ -209,6 +209,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.get_release_info.outputs.upload_url }}
-        asset_path: library/cppcount/build/dist/${{ steps.generate_release_file_name.outputs.release_file_name }}.tar.gz
+        asset_path: library/cppcount/build/${{ steps.generate_release_file_name.outputs.release_file_name }}.tar.gz
         asset_name: ${{ steps.generate_release_file_name.outputs.release_file_name }}.tar.gz
         asset_content_type: application/x-gzip      
