@@ -273,4 +273,59 @@ jobs:
         upload_url: ${{ steps.get_release_info.outputs.upload_url }}
         asset_path: library/cppcount/dist/${{steps.get_wheel_filename.outputs.filename}}
         asset_name: ${{steps.get_wheel_filename.outputs.filename}}
-        asset_content_type: application/octet-stream      
+        asset_content_type: application/octet-stream
+  
+  upload_pycount:
+    needs: create_release
+    runs-on: ubuntu-latest
+    steps:
+    - name: Obtention du code
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+        
+    - uses: actions/download-artifact@v2
+      with:
+        name: release_url
+    - name: Obtention de release_url
+      id: get_release_info
+      run: |
+        echo "::set-output name=upload_url::$(cat release_url.txt)"
+       
+    - uses: actions/download-artifact@v2
+      with:
+        name: release_version   
+    - name: Obtention de release_version
+      id: get_release_version
+      run: |
+        echo "::set-output name=version::$(cat release_version.txt)"
+  
+    - name: Changement du numéro de version dans setup.py
+      working-directory: library/pycount
+      run: |
+        sed -i 's/version="dev"/version="${{steps.get_release_version.outputs.version}}"/g' setup.py
+   
+    - name: Compilation
+      working-directory: library/pycount
+      run: |
+        python3 -m pip install --upgrade pip
+        python3 -m pip install --upgrade build
+        python3 -m build
+        
+    - name: Obtention du nom du fichier
+      id: get_wheel_filename
+      working-directory: library/pycount/dist
+      run: |
+        echo "::set-output name=filename::$(ls *.whl)"
+      
+    - name: Téléversement du fichier
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.get_release_info.outputs.upload_url }}
+        asset_path: library/pycount/dist/${{steps.get_wheel_filename.outputs.filename}}
+        asset_name: ${{steps.get_wheel_filename.outputs.filename}}
+        asset_content_type: application/octet-stream
+      
