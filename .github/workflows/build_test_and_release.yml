@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  linting-pycount:
+  linting_pycount:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -31,8 +31,8 @@ jobs:
           extra-mypy-options: ""
           extra-isort-options: ""
     
-  test-pycount:
-    needs: linting-pycount
+  test_pycount:
+    needs: linting_pycount
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -52,7 +52,7 @@ jobs:
         working-directory: library/pycount
         run: python3 -m unittest
 
-  test-cppcount:
+  test_cppcount:
     runs-on: ubuntu-latest
     steps:
       - name: Obtention du code
@@ -89,7 +89,7 @@ jobs:
           python3 -m build
         
   create_release:
-    needs: [test-pycount, test-cppcount]
+    needs: [test_pycount, test_cppcount]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
