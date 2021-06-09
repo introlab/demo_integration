@@ -12,5 +12,10 @@ jobs:
   
     steps:
     
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+        
     - name: Compilation du firmware Arduino
       uses: ./.github/actions/action-firmware-test
