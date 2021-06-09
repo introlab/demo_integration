@@ -30,7 +30,7 @@ jobs:
       - name: Install system dependencies
         run: | 
           sudo apt-get update
-          sudo apt-get install ninja-build cmake build-essential
+          sudo apt-get install ninja-build cmake build-essential python3
     
       
       - name: Create build directory
@@ -43,4 +43,16 @@ jobs:
         run: |
           cmake ..
           make
+          
+      - name: Execute tests
+        working-directory: library/cppcount/build/cppcount/tests
+        run: |
+          ./test_cppcount
+          
+      - name: Build Python Wheel
+        working-directory: library/cppcount
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade build
+          python3 -m build
         
