@@ -36,14 +36,6 @@ jobs:
           python3 -m pip install --upgrade build
           python3 -m build
           
-
-      - name: Package Python standard
-        working-directory: library/pycount
-        run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install --upgrade build
-          python3 -m build
-
       - name: Package Python pybind11
         working-directory: library/cppcount
         run: |
