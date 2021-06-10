@@ -18,6 +18,6 @@ Faites-nous part de vos commentaires / suggestions pour améliorer le projet dan
 
 # Remerciements
 
-![IntRoLab](IntRoLab.png)
+![IntRoLab](docs/IntRoLab.png)
 
 [IntRoLab - Laboratoire de robotique intelligente / interactive / intégrée / interdisciplinaire @ Université de Sherbrooke](https://introlab.3it.usherbrooke.ca)
