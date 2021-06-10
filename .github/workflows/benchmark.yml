@@ -54,7 +54,7 @@ jobs:
         run: |
           ./benchmark_cppcount
           
-      - name: Exécution du benchmark  pycount
+      - name: Exécution du benchmark pycount
         working-directory: library/benchmarks
         run: |
           source ./venv-pycount/bin/activate
@@ -67,4 +67,3 @@ jobs:
           source ./venv-cppcount-pybind11/bin/activate
           python3 -m pip install ../cppcount/dist/cppcount_pybind11-dev-*.whl
           python3 benchmark_cppcount_pybind11.py
-          
