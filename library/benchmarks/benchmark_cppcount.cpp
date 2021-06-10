@@ -27,7 +27,7 @@ void benchmarkCountCharacters()
 
     chrono::duration<double> elapsedTime = end - begin;
 
-    cout << __FUNCTION__ << ": " << elapsedTime.count() / N << " s";
+    cout << __FUNCTION__ << ": " << elapsedTime.count() / N << " s" << endl;
 }
 
 int main(int argc, char* argv[])
