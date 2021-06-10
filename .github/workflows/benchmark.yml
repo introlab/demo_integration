@@ -13,7 +13,45 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Installation des dépendances du système
+        run: | 
+          sudo apt-get update
+          sudo apt-get install ninja-build cmake build-essential python3
+    
+      - name: Création du dossier de compilation
+        working-directory: library/benchmarks
+        run: |
+          mkdir build
+
+      - name: Compilation
+        working-directory: library/benchmarks/build
+        run: |
+          cmake ..
+          make
+
+      - name: Package Python standard
+        working-directory: library/pycount
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade build
+          python3 -m build
+          
+
+      - name: Package Python standard
+        working-directory: library/pycount
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade build
+          python3 -m build
+
+      - name: Package Python pybind11
+        working-directory: library/cppcount
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade build
+          python3 -m build
+
+          
+
 
     
