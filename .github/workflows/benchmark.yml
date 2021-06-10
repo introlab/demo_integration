@@ -67,8 +67,4 @@ jobs:
           source ./venv-cppcount-pybind11/bin/activate
           python3 -m pip install ../cppcount/dist/cppcount_pybind11-dev-*.whl
           python3 benchmark_cppcount_pybind11.py
-
-
-
-
-    
+          
