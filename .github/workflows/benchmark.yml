@@ -39,16 +39,12 @@ jobs:
         working-directory: library/benchmarks
         run: |
           source ./venv-pycount/bin/activate
-          python3 -m pip install --upgrade pip
-          python3 -m pip install --upgrade build
           python3 -m pip install ../pycount
        
       - name: Installation pour cppcount-pybind11
         working-directory: library/benchmarks
         run: |
           source ./venv-cppcount-pybind11/bin/activate
-          python3 -m pip install --upgrade pip
-          python3 -m pip install --upgrade build
           python3 -m pip install ../cppcount
 
       - name: Exécution des benchmarks 
