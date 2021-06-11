@@ -6,7 +6,7 @@ Projet de démonstration pour l'intégration, distribution et déploiement conti
 
 L'objectif de demo_integration est donc de montrer, par un exemple concret, les bonnes pratiques à mettre en place pour les projets du laboratoire IntRoLab. Ce projet peut également servir de point de départ pour la création d'un nouveau projet.
 
-Dans ce projet vous trouverez :
+Dans le répertoire racine, vous trouverez :
 
 * [Une bibliothèque Python](library/pycount)
 * [Une bibliothèque C++](library/cppcount)
@@ -15,7 +15,7 @@ Dans ce projet vous trouverez :
 * Les tests unitaires pour chaque bibliothèque
 * [Un firmware Arduino](firmware)
 * Les tests de compilation du firmware
-* Les [actions GitHub](https://docs.github.com/en/actions) pour automatiser la compilation, les tests et les déploiements
+* Les [scripts](.github/workflows) pour automatiser la compilation, les tests et les déploiements avec les [actions GitHub](https://docs.github.com/en/actions)
 
 ## Documentation
 
