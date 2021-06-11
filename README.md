@@ -10,7 +10,7 @@ Dans ce projet vous trouverez :
 
 * [Une librairie Python](library/pycount)
 * [Une librairie C++](library/cppcount)
-* [Les bindings Python de la librairie C++](library/cppcount/python)
+* [Les bindings Python de la librairie C++](library/cppcount/cppcount/python)
 * [Un "benchmark" des trois librairies](library/benchmarks)
 * Les tests unitaires pour chaque librairie
 * [Un firmware Arduino](firmware)
