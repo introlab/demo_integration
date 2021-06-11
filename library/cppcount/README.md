@@ -1,6 +1,6 @@
 # cppcount
 
-Bibliothèque C++ de démonstration. Cette librairie compte les occurences de chaque caractère dans une chaîne de caractère et retourne dans un dictionnaire.
+Bibliothèque C++ de démonstration. Cette bibliothèque compte les occurences de chaque caractère dans une chaîne de caractère et retourne le résultat dans un dictionnaire.
 
 Nous utilisons:
 
@@ -32,7 +32,7 @@ git submodule init
 git submodule update --recursive
 ```
 
-## Compilation de la librairie C++
+## Compilation de la bibliothèque C++
 
 À partir du répertoire courant (library/cppcount):
 
@@ -47,7 +47,7 @@ cmake ..
 make 
 ```
 
-## Compilation de la librairie Python (bindings)
+## Compilation de la bibliothèque Python (bindings)
 
 ```bash
 # Assurez-vous d'être dans le répertoire library/cppcount avant d'exécuter ces commandes
@@ -57,7 +57,7 @@ python3 -m pip install --upgrade build
 python3 -m build
 ```
 
-## Exécution des tests de la librairie C++
+## Exécution des tests de la bibliothèque C++
 
 ```bash
 # Assurez-vous d'être dans le répertoire library/cppcount/build/cppcount/tests
