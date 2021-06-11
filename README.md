@@ -4,18 +4,18 @@
 
 Projet de démonstration pour l'intégration, distribution et déploiement continus (CI/CD) avec Git et les outils disponibles sur GitHub. Nous proposons aussi une structure de projet pour uniformiser la présentation et la manière de faire pour tous nos projets.
 
-L'objectif de demo_integration est donc de montrer, par un exemple concret, les bonnes pratiques à mettre en place pour les projets du laboratoire IntRoLab.  
+L'objectif de demo_integration est donc de montrer, par un exemple concret, les bonnes pratiques à mettre en place pour les projets du laboratoire IntRoLab. Ce projet peut également servir de point de départ pour la création d'un nouveau projet.
 
 Dans ce projet vous trouverez :
 
-* [Une librairie Python](library/pycount)
-* [Une librairie C++](library/cppcount)
-* [Les bindings Python de la librairie C++](library/cppcount/cppcount/python)
-* [Un "benchmark" des trois librairies](library/benchmarks)
-* Les tests unitaires pour chaque librairie
+* [Une bibliothèque Python](library/pycount)
+* [Une bibliothèque C++](library/cppcount)
+* [Les bindings Python de la bibliothèque C++](library/cppcount/cppcount/python)
+* [Un "benchmark" des trois bibliothèques](library/benchmarks)
+* Les tests unitaires pour chaque bibliothèque
 * [Un firmware Arduino](firmware)
 * Les tests de compilation du firmware
-* Les [actions GitHub](https://docs.github.com/en/actions) pour automatiser les tests et les déploiements
+* Les [actions GitHub](https://docs.github.com/en/actions) pour automatiser la compilation, les tests et les déploiements
 
 ## Documentation
 
