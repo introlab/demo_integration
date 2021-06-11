@@ -17,6 +17,13 @@ Dans le répertoire racine, vous trouverez :
 * Les tests de compilation du firmware
 * Les [scripts](.github/workflows) pour automatiser la compilation, les tests et les déploiements avec les [actions GitHub](https://docs.github.com/en/actions)
 
+## Obtenir le code
+
+```bash
+# Obtention du code avec tous les composants (sous-modules)
+git clone https://github.com/introlab/demo_integration.git --recurse-submodules
+```
+
 ## Documentation
 
 * [Introduction à l'intégration continue](docs/Introduction_Integration_Continue.md)
