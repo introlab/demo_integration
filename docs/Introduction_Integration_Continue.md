@@ -14,7 +14,8 @@ Dans plusieurs projets modernes de développement logiciel, il est souvent quest
 ## Le déploiement continu
 
 
-## A
+## Utilisation des outils sur GitHub
+
 
 
 ## RÉFÉRENCES

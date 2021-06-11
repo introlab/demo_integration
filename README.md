@@ -2,11 +2,13 @@
 
 [![Actions Status](https://github.com/introlab/demo_integration/actions/workflows/build_test_and_release.yml/badge.svg)](https://github.com/introlab/demo_integration/actions)
 
-Projet de démonstration pour l'intégration, distribution et déploiement continus (CI/CD) avec Git et les outils disponibles sur GitHub. L'objectif de ce projet est de montrer, par un exemple concret, les bonnes pratiques à mettre en place pour les projets du laboratoire IntRoLab.  
+Projet de démonstration pour l'intégration, distribution et déploiement continus (CI/CD) avec Git et les outils disponibles sur GitHub. Nous proposons aussi une structure de projet pour uniformiser la présentation et la manière de faire pour tous nos projets.
+
+L'objectif de demo_integration est donc de montrer, par un exemple concret, les bonnes pratiques à mettre en place pour les projets du laboratoire IntRoLab.  
 
 Dans ce projet vous trouverez :
 
-* [Une librairie Python](library/pycout)
+* [Une librairie Python](library/pycount)
 * [Une librairie C++](library/cppcount)
 * [Les bindings Python de la librairie C++](library/cppcount/python)
 * [Un "benchmark" des trois librairies](library/benchmarks)
@@ -17,7 +19,7 @@ Dans ce projet vous trouverez :
 
 ## Documentation
 
-* [Introduction à l'intégration continue](docs/Introduction_integration_continue.md)
+* [Introduction à l'intégration continue](docs/Introduction_Integration_Continue.md)
 * [Outils utilisés](docs/Outils.md)
 * [Structure des projets](docs/Structure_Projet.md)
 * [Flux de travail](docs/Flux_Travail.md)
