@@ -21,3 +21,13 @@ Un nouveau projet doit minimalement contenir :
 4. Les mots clés du projet
 5. (Au besoin) les ["workflows"](../.github/workflows) pour l'intégration continue
 6. Une organisation adéquate des répertoires (selon le type projet) et une explication de l'organisation.
+
+## Projets C/C++
+
+* Utilisation de CMake comme "build system"
+* Style de code uniforme. Ex: [Google](https://google.github.io/styleguide/cppguide.html)
+* Utilisation des standards modernes C++11/14/20
+
+## Projets Python
+
+* Conformité au style [PEP 8](https://www.python.org/dev/peps/pep-0008/)
