@@ -1,0 +1,61 @@
+name: Analyse des performances
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Obtention du code
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Installation des dépendances du système
+        run: | 
+          sudo apt-get update
+          sudo apt-get install ninja-build cmake build-essential python3 python3-venv
+    
+      - name: Création du dossier de compilation
+        working-directory: library/benchmarks
+        run: |
+          mkdir build
+
+      - name: Compilation
+        working-directory: library/benchmarks/build
+        run: |
+          cmake ..
+          make
+
+      - name: Création des venvs
+        working-directory: library/benchmarks
+        run: |
+          python3 -m venv venv-pycount
+          python3 -m venv venv-cppcount-pybind11
+          
+      - name: Installation pour pycount
+        working-directory: library/benchmarks
+        run: |
+          source ./venv-pycount/bin/activate
+          python3 -m pip install ../pycount
+       
+      - name: Installation pour cppcount-pybind11
+        working-directory: library/benchmarks
+        run: |
+          source ./venv-cppcount-pybind11/bin/activate
+          python3 -m pip install ../cppcount
+
+      - name: Exécution des benchmarks 
+        working-directory: library/benchmarks/build
+        run: |
+          echo "cppcount" >> results.txt
+          ./benchmark_cppcount >> results.txt
+          echo "pycount" >> results.txt
+          source ../venv-pycount/bin/activate
+          python3 ../benchmark_pycount.py >> results.txt
+          echo "cppcount-pybind11" >> results.txt
+          source ../venv-cppcount-pybind11/bin/activate
+          python3 ../benchmark_cppcount_pybind11.py >> results.txt
+          cat results.txt

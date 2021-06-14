@@ -1,40 +1,54 @@
-# This is a basic workflow to help you get started with Actions
-name: Tests de la librairie Python
+name: Tests de la bibliothèque Python (pycount)
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main, dev ]
   pull_request:
-    branches: [ main, dev ]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches: [ main ]
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  linting:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.6     
+      - uses: ricardochaves/python-lint@v1.4.0
+        with:
+          python-root-list: "library/pycount"
+          use-pylint: false
+          use-pycodestyle: false
+          use-flake8: true
+          use-black: false
+          use-mypy: false
+          use-isort: false
+          extra-pylint-options: ""
+          extra-pycodestyle-options: ""
+          extra-flake8-options: "--exclude=__init__.py"
+          extra-black-options: ""
+          extra-mypy-options: ""
+          extra-isort-options: ""
     
+  build:
+    needs: linting
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [3.6, 3.7, 3.8, 3.9]
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Obtention du code
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
 
       - name: Installation de Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-     
+          
+      - name: Exécution des tests
+        working-directory: library/pycount
+        run: python3 -m unittest
+        
