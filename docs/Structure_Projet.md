@@ -27,7 +27,10 @@ Un nouveau projet doit minimalement contenir :
 * Utilisation de CMake comme "build system"
 * Style de code uniforme. Ex: [Google](https://google.github.io/styleguide/cppguide.html)
 * Utilisation des standards modernes C++11/14/20
+* Tests avec [GoogleTest](https://github.com/google/googletest)
 
 ## Projets Python
 
 * Conformité au style [PEP 8](https://www.python.org/dev/peps/pep-0008/)
+* Tests avec la bibliothèque intégrée [unittest](https://docs.python.org/3/library/unittest.html)
+* Distribution avec [pypi.org](https://pypi.org/) (si possible)
