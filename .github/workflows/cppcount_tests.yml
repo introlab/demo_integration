@@ -1,4 +1,4 @@
-name: CPP Tests
+name: Tests de la bibliothèque c++ (cppcount)
 
 on:
   pull_request:
