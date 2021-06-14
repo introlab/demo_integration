@@ -14,20 +14,22 @@ Un nouveau projet doit minimalement contenir :
       1. Site Web
       2. Articles scientifiques
       3. Vidéos YouTube
-   5. Un logo du laboratoire et lien Internet dans les remerciements
+   5. Remerciements
+      1. Un logo du laboratoire / compagnie / organisatino et lien Internet
 2. Un fichier [LICENSE](../LICENSE) qui mentionne clairement la license des fichiers sources.
    1. Ex: GPLv3, BSD 3 clauses, etc.
 3. Une description sommaire pour facilier la recherche
 4. Les mots clés du projet
-5. (Au besoin) les ["workflows"](../.github/workflows) pour l'intégration continue
+5. Les ["workflows"](../.github/workflows) pour l'intégration continue
 6. Une organisation adéquate des répertoires (selon le type projet) et une explication de l'organisation.
 
 ## Projets C/C++
 
-* Utilisation de CMake comme "build system"
+* Utilisation de [CMake](https://cmake.org/) comme "build system"
 * Style de code uniforme. Ex: [Google](https://google.github.io/styleguide/cppguide.html)
 * Utilisation des standards modernes C++11/14/20
 * Tests avec [GoogleTest](https://github.com/google/googletest)
+* Distribution par release / installateur si possible.
 
 ## Projets Python
 
