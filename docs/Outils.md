@@ -46,7 +46,7 @@ Ceci sera utile pour faciliter le suivi des projets.
 
 ## GitHub Actions
 
-[GitHub Actions](https://docs.github.com/en/actions) Permet d'automatiser les "flux" (workflows en anglais) de travail pour permettre [l'intégration continue](Introduction_Integration_Continue.md).
-Il est possible de personnaliser le comportement des actions selon plusieurs "événements" tels les push/pull-request dans certainse branches de votre projet. 
+[GitHub Actions](https://docs.github.com/en/actions) Permet d'automatiser les "flux" (workflows) de travail pour permettre [l'intégration continue](Introduction_Integration_Continue.md).
+Il est possible de personnaliser le comportement des actions selon plusieurs "événements" tels les push/pull-requests dans certaines branches de votre projet. 
 Ceci est utile par exemple lorsque vous faites un pull-request dans la branche "main" pour vérifier le code avec des tests avant de faire le merge.
 Vous pouvez consulter les "workflows" de ce projet [ici](../.github/workflows).
