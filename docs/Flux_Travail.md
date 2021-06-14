@@ -1,16 +1,18 @@
 # Flux de travail
 
-1. Création d'un Issue pour référencer un problème ou une amélioration.
+1. Création d'un [Issue](https://github.com/introlab/demo_integration/issues) pour référencer un problème ou une amélioration.
 2. Création d'une branche à partir de la branche "main" pour travailler sur l'amélioration.
    1. S'assurer que votre branche "main" est à jour par rapport au dépôt principal sur GitHub avant de créer votre branche.
 3. Faire les changements dans la nouvelle branche et s'assurer que les tests fonctionnent.
    1. Les commentaires des "commits" peuvent faire référence à ce Issue : Ex "Ref #234 Ajout de fonctionnalité x."
-4. Faire un "push"" sur le dépôt github dans une branche du même nom.
+4. Faire un "push"" sur le dépôt GitHub dans une branche du même nom.
    1. Vous pouvez faire plusieurs "push" dans cette branche si le travail prend plus d'une journée. Ceci permet aux autres développeurs de voir vos progrès et de vous assister en cas de besoin.
 5. Quand vous êtes satisfait(e)s des modifications apportés et quand vous avez terminé l'amélioration, faites un pull-request dans la branche principale "main" à partir des outils de GitHub.
    1. Vous pouvez nommer un reviewer
    2. Vos "workflows" devraient exécuter automatiquement les tests à ce moment.
+   3. Il n'est pas nécessaire de refaire un pull-request si vous étiez déjà en train de modifier une branche dans laquelle le pull-request a déjà été demandé.
 6. Les "reviewers" peuvent commenter les changements et demander des modifications. Si c'est le cas, retournez à l'étape 3 pour compléter les changements. Si tout est accepté, passez à la prochaine étape.
 7. La personne responsable du projet peut exécuter le "merge" dans la branche "main".
-   1. À cette étape, les tests, et le déploiement des nouvelles versions devraient s'effectuer.
-   2. Si tout s'est bien passé, la branche qui vient d'être "mergé" peut être effacée.
+   1. Faire un squash-and-merge pour éviter les commits intermédiaire qui ne fonctionnent pas nécessairement.
+   2. À cette étape, les tests, et le déploiement des nouvelles versions devraient s'effectuer.
+   3. Si tout s'est bien passé, la branche qui vient d'être "mergé" peut être effacée.
