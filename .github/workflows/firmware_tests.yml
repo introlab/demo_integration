@@ -1,0 +1,23 @@
+name: Test de compilation du Firmware
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [ main ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Obtention du code
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+        
+    - name: Compilation     
+      uses: arduino/compile-sketches@v1
+      with:
+        fqbn: 'arduino:avr:uno'
+        sketch-paths: '- firmware'
+        verbose: True
