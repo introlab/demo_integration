@@ -14,7 +14,7 @@ Les modifications apportées par les dévelopeurs sont automatiquement testées 
 
 ## Le déploiement continu
 
-Dans un contexte de production, il est nécessaire de déployer les lociciels ou bibliothèques sous forme d'installateur ou de "packages" utilisables (pypi, nodejs package, zip). Il est possible d'automatiser cette étape à chaque fois que le "merge" se produit dans la branche principale.
+Dans un contexte de production, il est nécessaire de déployer les lociciels ou bibliothèques sous forme d'installateur ou de "packages" utilisables (pypi, package NPM, zip). Il est possible d'automatiser cette étape à chaque fois que le "merge" se produit dans la branche principale.
 
 ## Flux de travail
 
