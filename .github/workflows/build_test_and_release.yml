@@ -1,4 +1,4 @@
-name: Constuction, tests et GitHub Release
+name: Construction, tests et Release sur GitHub
 
 on:
   push:
