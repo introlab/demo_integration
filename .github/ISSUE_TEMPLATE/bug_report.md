@@ -1,38 +1,41 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: Rapport d'erreur ou de bogue
+about: Créez un rapport pour nous aider à améliorer notre logiciel
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Description du problème**
+Une description claire et concise du problème.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+**Pour Reproduire**
+Étapes pour reproduire le problème:
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+1. Allez à '...'
+2. Cliquez sur '....'
+3. Naviguez à '....'
+4. Voir l'erreur ...
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Comportement souhaité**
+Une description précise et concise de ce que vous attendez du logiciel.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+**Capture d'écran**
+Si cela s'applique, une capture d'écran montrant le problème serait utile.
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+**Bureau (s.v.p. remplir les informations):**
 
-**Additional context**
-Add any other context about the problem here.
+- OS: [ex: iOS, Windows, OSX]
+- Navigateur [ex: Chrome, Safari]
+- Version [ex: 22]
+
+**Téléphone (please complete the following information):**
+
+- Périphérique: [ex: iPhone6]
+- OS: [ex: iOS8.1]
+- Navigateur [ex: Safari]
+- Version [ex: 22]
+
+**Information supplémentaire**
+N'importe quelle information qui serait utile à comprendre le problème.
