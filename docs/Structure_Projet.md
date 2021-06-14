@@ -15,7 +15,7 @@ Un nouveau projet doit minimalement contenir :
       2. Articles scientifiques
       3. Vidéos YouTube
    5. Remerciements
-      1. Un logo du laboratoire / compagnie / organisatino et lien Internet
+      1. Un logo du laboratoire / compagnie / organisation et lien Internet
 2. Un fichier [LICENSE](../LICENSE) qui mentionne clairement la license des fichiers sources.
    1. Ex: GPLv3, BSD 3 clauses, etc.
 3. Une description sommaire pour facilier la recherche
@@ -29,7 +29,7 @@ Un nouveau projet doit minimalement contenir :
 * Style de code uniforme. Ex: [Google](https://google.github.io/styleguide/cppguide.html)
 * Utilisation des standards modernes C++11/14/20
 * Tests avec [GoogleTest](https://github.com/google/googletest)
-* Distribution par release / installateur si possible.
+* Distribution par release / installateur (si possible)
 
 ## Projets Python
 
