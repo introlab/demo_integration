@@ -18,8 +18,8 @@ Un nouveau projet doit minimalement contenir :
       1. Un logo du laboratoire / compagnie / organisation et lien Internet
 2. Un fichier [LICENSE](../LICENSE) qui mentionne clairement la license des fichiers sources.
    1. Ex: GPLv3, BSD 3 clauses, etc.
-3. Une description sommaire pour facilier la recherche
-4. Les mots clés du projet
+3. Une description sommaire pour facilier la recherche (administratinon du projet GitHub)
+4. Les mots clés du projet (administratinon du projet GitHub)
 5. Les ["workflows"](../.github/workflows) pour l'intégration continue
 6. Une organisation adéquate des répertoires (selon le type projet) et une explication de l'organisation.
 
