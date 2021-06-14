@@ -30,7 +30,7 @@ Les [sous-modules git](https://www.atlassian.com/fr/git/tutorials/git-submodule)
 De cette façon, il est possible de bien contrôler les versions des dépendances à partir du dépôt "maître".
 Cette outil est souvent utilisé pour les projets C++ avec des bibliothèques à compiler.
 Vous pouvez voir un exemple d'utilisation de sous-modules pour ce projet [ici](../libbrary/cppcount/3rdParty).
-Par contre, pour certains projets, il est préférable de favoriser les gestionnaires de dépendences comme NPM ou pip au lieu de faire des submodules.
+Par contre, pour certains projets, il est préférable de favoriser les gestionnaires de dépendences comme NPM ou pip au lieu de faire des submodules puisqu'ils font normalement référence à des version "distribuées" et supportées.
 
 ## CMake
 
