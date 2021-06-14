@@ -2,7 +2,7 @@
 name: Rapport d'erreur ou de bogue
 about: Créez un rapport pour nous aider à améliorer notre logiciel
 title: ''
-labels: ''
+labels: 'bug'
 assignees: ''
 
 ---
