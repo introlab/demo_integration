@@ -65,7 +65,7 @@ python3 -m build
 ./test_cppcount
 ```
 
-Vous devriez avoir un résultat qui ressemble à :
+Vous devriez avoir un résultat qui ressemble à ceci:
 
 ```text
 [==========] Running 1 test from 1 test suite.
