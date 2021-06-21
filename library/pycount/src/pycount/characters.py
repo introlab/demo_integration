@@ -9,5 +9,6 @@ def count_characters(string):
 
     return dict(counts)
 
+
 def count_characters_ignoreCase(string):
     return count_characters(string.upper())

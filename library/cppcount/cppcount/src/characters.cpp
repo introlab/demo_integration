@@ -21,7 +21,7 @@ unordered_map<char, size_t> countCharactersIgnoreCase(const string& str)
 
     for (auto& pair: countCharacters(str))
     {
-        counts[toupper(pair.first)] = pair.second;
+        counts[toupper(pair.first)] += pair.second;
     }
 
     return counts;
