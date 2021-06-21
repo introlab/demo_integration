@@ -1,0 +1,3 @@
+include CMakeLists.txt
+recursive-include cppcount *
+recursive-include 3rdParty *
