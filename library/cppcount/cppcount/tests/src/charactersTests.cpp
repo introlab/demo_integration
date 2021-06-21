@@ -19,3 +19,18 @@ TEST(charactersTests, countCharacters)
 
     EXPECT_TRUE(counts == expected_counts);
 }
+
+TEST(charactersTests, countCharactersIgnoreCase)
+{
+    unordered_map<char, size_t> counts = countCharactersIgnoreCase("BonjOur BOb");
+    unordered_map<char, size_t> expected_counts(
+            {{'B', 3},
+             {'O', 3},
+             {'N', 1},
+             {'J', 1},
+             {'U', 1},
+             {'R', 1},
+             {' ', 1}});
+
+    EXPECT_TRUE(counts == expected_counts);
+}
