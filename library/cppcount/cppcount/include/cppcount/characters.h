@@ -5,5 +5,6 @@
 #include <string>
 
 std::unordered_map<char, size_t> countCharacters(const std::string& str);
+std::unordered_map<char, size_t> countCharactersIgnoreCase(const std::string& str);
 
 #endif

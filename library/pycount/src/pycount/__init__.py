@@ -1,1 +1,1 @@
-from .characters import count_characters
+from .characters import count_characters, count_characters_ignoreCase
