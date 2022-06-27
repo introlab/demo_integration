@@ -1,7 +1,7 @@
 import os
 import time
 
-from cppcount_pybind11 import count_values
+from cppcount_pybind11 import count_characters, count_values
 
 N = 100
 
