@@ -11,5 +11,5 @@ unordered_map<char, size_t> countCharacters(const string& str)
 
 unordered_map<char, size_t> countCharactersIgnoreCase(const string& str)
 {
-    return countValues(str.begin(), str.end(), [](const auto& x) { return static_cast<char>(toupper(x)); });
+    return countValues(str.begin(), str.end(), [](const auto& x) { return static_cast<char>(tolower(x)); });
 }
