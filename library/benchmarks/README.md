@@ -7,7 +7,7 @@ Dans le but de comparer les performances des implémentations de nos bibliothèq
 ### Installation des dépendances système
 
 ```bash
-# MAJ des paquets systèmes 
+# MAJ des paquets systèmes
 sudo apt-get update
 # Instllation des dépendances
 sudo apt-get install ninja-build cmake build-essential python3 python3-venv
@@ -38,7 +38,7 @@ cd build
 # Executer cmake
 cmake ..
 # Compilation du benchmark C++
-make 
+make
 ```
 
 ## Création des environnements (venv) pour les benchmarks Python
@@ -63,7 +63,9 @@ Dans le répertoire library/benchmarks/build:
 L'exécution devrait vous donner une sortie similaire à ceci qui représente le temps de traitement du fichier input.txt :
 
 ```text
-benchmarkCountCharacters: 0.0216991 s
+benchmarkCountCharacters: 0.0106488 s
+benchmarkCountValues: 0.0111276 s
+benchmarkCountValuesMap: 0.0213027 s
 ```
 
 ## Exécution du benchmark pour bibliothèque pycount
@@ -73,7 +75,7 @@ Dans le répertoire library/benchmarks
 ```bash
 # Installation pour pycount
 source . /venv-pycount/bin/activate
-python3 -m pip install ../pycount 
+python3 -m pip install ../pycount
 # Exécuter le benchmark
 python3 ./benchmark_pycount.py
 ```
@@ -81,7 +83,9 @@ python3 ./benchmark_pycount.py
 L'exécution devrait vous donner une sortie similaire à ceci qui représente le temps de traitement du fichier input.txt :
 
 ```text
-benchmark_count_characters: 0.1936646032333374 s
+benchmark_count_characters: 0.18044040203094483 s
+benchmark_count_values: 0.1599952006340027 s
+benchmark_count_values_map: 0.4135279726982117 s
 ```
 
 ## Exécution du benchmark pour bibliothèque cppcount-pybind11
@@ -91,7 +95,7 @@ Dans le répertoire library/benchmarks:
 ```bash
 # Installation pour pycount
 source ./venv-cppcount-pybind11/bin/activate
-python3 -m pip install ../cppcount 
+python3 -m pip install ../cppcount
 # Exécuter le benchmark
 python3 ./benchmark_cppcount_pybind11.py
 ```
@@ -99,5 +103,7 @@ python3 ./benchmark_cppcount_pybind11.py
 L'exécution devrait vous donner une sortie similaire à ceci qui représente le temps de traitement du fichier input.txt :
 
 ```text
-benchmark_count_characters: 0.024656734466552734 s
+benchmark_count_characters: 0.013517167568206787 s
+benchmark_count_values: 0.03358586311340332 s
+benchmark_count_values_map: 0.28410849809646604 s
 ```

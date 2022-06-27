@@ -52,7 +52,7 @@ def benchmark_count_values_map():
         _ = count_values(values, lambda x: x * x)
     elapsed_time = time.time() - start_time
 
-    print('benchmark_count_values:', elapsed_time / N, 's')
+    print('benchmark_count_values_map:', elapsed_time / N, 's')
 
 
 if __name__ == '__main__':

@@ -2,7 +2,7 @@
 
 Bibliothèque Python de démonstration. Cette bibliothèque compte les occurences de chaque caractère dans une chaîne de caractère et retourne le résultat dans un dictionnaire.
 
-Il n'y a aucune dépendance à installer autre que python3. L'implémentation se trouve dans [pycount/caracters.py](pycount/characters.py).
+Il n'y a aucune dépendance à installer autre que python3. L'implémentation se trouve dans [src/pycount/caracters.py](src/pycount/characters.py) et [src/pycount/values.py](src/pycount/values.py).
 
 ## Exécution des tests
 
@@ -16,7 +16,7 @@ L'exécution devrait donner un résultat similaire à ceci :
 
 ```text
 ----------------------------------------------------------------------
-Ran 1 test in 0.000s
+Ran 4 test in 0.000s
 
 OK
 ```
