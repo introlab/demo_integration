@@ -1,14 +1,11 @@
-from collections import defaultdict
+from typing import Dict
+
+from .values import count_values
 
 
-def count_characters(string):
-    counts = defaultdict(int)
-
-    for character in string:
-        counts[character] += 1
-
-    return dict(counts)
+def count_characters(string: str) -> Dict[str, int]:
+    return count_values(string)
 
 
-def count_characters_ignoreCase(string):
-    return count_characters(string.upper())
+def count_characters_ignoreCase(string: str) -> Dict[str, int]:
+    return count_values(string.upper())
