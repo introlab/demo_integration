@@ -13,7 +13,7 @@ Nous utilisons:
 ### Installation des dépendances système
 
 ```bash
-# MAJ des paquets systèmes 
+# MAJ des paquets systèmes
 sudo apt-get update
 # Instllation des dépendances
 sudo apt-get install ninja-build cmake build-essential python3
@@ -44,7 +44,7 @@ cd build
 # Executer cmake
 cmake ..
 # Compilation
-make 
+make
 ```
 
 ## Compilation de la bibliothèque Python (bindings)
@@ -68,14 +68,26 @@ python3 -m build
 Vous devriez avoir un résultat qui ressemble à ceci:
 
 ```text
-[==========] Running 1 test from 1 test suite.
+[==========] Running 5 tests from 2 test suites.
 [----------] Global test environment set-up.
-[----------] 1 test from charactersTests
+[----------] 2 tests from charactersTests
 [ RUN      ] charactersTests.countCharacters
 [       OK ] charactersTests.countCharacters (0 ms)
-[----------] 1 test from charactersTests (0 ms total)
+[ RUN      ] charactersTests.countCharactersIgnoreCase
+[       OK ] charactersTests.countCharactersIgnoreCase (0 ms)
+[----------] 2 tests from charactersTests (0 ms total)
+
+[----------] 3 tests from valuesTests
+[ RUN      ] valuesTests.countValues
+[       OK ] valuesTests.countValues (0 ms)
+[ RUN      ] valuesTests.countValuesWithMapInt
+[       OK ] valuesTests.countValuesWithMapInt (0 ms)
+[ RUN      ] valuesTests.countValuesWithMapString
+[       OK ] valuesTests.countValuesWithMapString (0 ms)
+[----------] 3 tests from valuesTests (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 1 test.
+[==========] 5 tests from 2 test suites ran. (0 ms total)
+[  PASSED  ] 5 tests.
+
 ```
