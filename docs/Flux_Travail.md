@@ -1,9 +1,11 @@
 # Flux de travail
 
+Voici un test pajdjsjajdhshahhfdhshdhs.
+
 Voici le flux de travail qui est proposé:
 
 1. Création d'un [Issue](https://github.com/introlab/demo_integration/issues) pour référencer un problème ou une amélioration.
-2. Création d'une [branche](https://www.atlassian.com/fr/git/tutorials/using-branches) à partir de la branche "main" pour travailler sur l'amélioration.
+2. Création d'une [branche 1111](https://www.atlassian.com/fr/git/tutorials/using-branches) à partir de la branche "main" pour travailler sur l'amélioration.
    1. S'assurer que votre branche "main" est à jour par rapport au dépôt principal sur GitHub avant de créer votre branche en faisant un [pull](https://www.atlassian.com/fr/git/tutorials/syncing/git-pull).
 3. Faire les changements dans la nouvelle branche et s'assurer que les tests fonctionnent.
    1. Les commentaires des "commits" peuvent faire référence à ce Issue : Ex "Ref #234 Ajout de fonctionnalité x."
